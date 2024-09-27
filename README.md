@@ -3,12 +3,13 @@
 This repository contains two Python scripts for file encryption and decryption using the cryptography library. They are designed for educational purposes. Please use them responsibly and ensure you have permission to encrypt or decrypt any files.
 
 ## Overview
+The Ransomware Script provide a straightforward way to securely encrypt and decrypt files using advanced cryptographic techniques. This repository contains two main scripts:
 
-# encrypter.py: 
-Encrypts files in specified directories (excluding the C:\ drive on Windows) and sends the encryption key to a Discord webhook.
+encrypter.py: This script scans specified directories (excluding the C:\ drive on Windows) for files to encrypt. It generates a unique encryption key, encrypts the files, and sends the key to a designated Discord webhook for safekeeping.
 
-# decrypter.py: 
-Decrypts files previously encrypted using the corresponding encryption key.
+decrypter.py: This script allows users to decrypt previously encrypted files. It requires the encryption key, which must be entered at runtime. The script will then locate and decrypt the files in the /home directory.
+
+These tools utilize the cryptography library for secure encryption, making them ideal for educational demonstrations and controlled use cases. Users should ensure they have proper permissions before encrypting or decrypting files.
 
 ## Requirements
 `Python 3.x
