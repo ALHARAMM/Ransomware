@@ -2,7 +2,7 @@ import os
 import time
 import threading
 from cryptography.fernet import Fernet
-print '''
+print (r'''
 ,---. .         ,-.                      .          
   |   |         |  \                     |          
   |   |-. ,-.   |  | ,-. ,-. ;-. . . ;-. |-  ,-. ;-.
@@ -11,7 +11,7 @@ print '''
                                  `-' '              
 v2.5
 Copyright: @ALHARAN
-'''
+''')
 # Load the encryption key
 key = input('Enter The Key To Decrypt Files: ')
 
@@ -65,3 +65,4 @@ for thread in threads:
     thread.join()
 end_time_actual = time.time()
 print(f"[*] Decryption process ended in {end_time_actual - start_time:.2f} seconds.")
+                                                 
